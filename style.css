@@ -1,0 +1,919 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    width: 100%;
+    height: 100vh;
+    font-family: "Nunito", sans-serif;
+    overflow-x: hidden;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.left {
+    width: 15%;
+    height: 100%;
+    background-color: #F8FAFC;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: left;
+    line-height: 2rem;
+    position: fixed;
+    transition: width 0.3s ease;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.left.collapsed {
+    width: 60px;
+    padding: 10px;
+    align-items: center;
+}
+
+.left.collapsed .head,
+.left.collapsed .common p,
+.left.collapsed .export-btn span,
+.left.collapsed #head .head {
+    display: none;
+}
+
+.left.collapsed #head {
+    justify-content: center;
+}
+
+.left.collapsed .common {
+    justify-content: center;
+}
+
+.left.collapsed .common .fa-solid {
+    margin-right: 0;
+}
+
+.left.collapsed .export-btn {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left.collapsed .export-btn .fa-solid {
+    margin-right: 0;
+}
+
+.left.collapsed .export {
+    padding-left: 0;
+    justify-content: center;
+}
+
+.toggle-btn {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.toggle-btn .fa-solid {
+    font-size: 16px;
+    color: #64748B;
+    transition: transform 0.3s ease;
+    background: none;
+    margin: 0;
+    padding: 5px;
+}
+
+.left.collapsed .toggle-btn {
+    justify-content: center;
+}
+
+.left.collapsed .toggle-btn .fa-solid {
+    transform: rotate(180deg);
+}
+
+#head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.head {
+    padding: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: -10px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: 85%;
+    background-color: #F8F9FA;
+    gap: 15px;
+    margin-left: 15%;
+    height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+.right.expanded {
+    margin-left: 60px;
+    flex-basis: calc(100% - 60px);
+    width: calc(100% - 60px);
+}
+
+ol {
+    list-style: none;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.active {
+    background-color: #F1F5F9;
+    color: #356ee9;
+    border-right: 2px solid blue;
+
+}
+
+.active .fa-solid {
+    color: #356ee9;
+}
+
+svg {
+    color: white;
+    width: 49px;
+    height: 47px;
+    margin-top: 20px;
+    padding: 5.5px;
+    background-color: #266DCD;
+    border-radius: 5px;
+}
+
+rect {
+    fill: white;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+    background-color: #F8FAFC;
+    padding: 10px;
+}
+
+.search p {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.info .fa-regular {
+    color: #64748B;
+    padding: 6px;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.info .fa-regular:hover {
+    color: #356ee9;
+    cursor: pointer;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    background: transparent;
+    width: 200px;
+    outline: none;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #64748B;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.label {
+    background-color: #F3F4F5;
+    width: 400px;
+    padding: 4px;
+    border-radius: 20px;
+    text-align: left;
+    padding-left: 20px;
+    height: 40px
+}
+
+.fa-solid {
+    color: #64748B;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+p {
+    font-size: 17px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 25px;
+}
+
+.revenue {
+    background-color: white;
+    width: 40%;
+    text-align: left;
+    padding: 1.5rem;
+    line-height: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    border-radius: 20px;
+}
+
+.revenue .fa-solid {
+    color: #64748B;
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.class {
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    color: blue;
+}
+
+.change {
+    background-color: #ECFDF5;
+    color: green;
+}
+
+.parts {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#ticket {
+    font-size: 50px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+
+.nav {
+    margin-top: 30px;
+}
+
+.common {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.common .fa-solid {
+    color: #64748B;
+    background-color: #F3F4F5;
+    border-radius: 5px;
+}
+
+.common p {
+    font-size: 16px;
+    color: #64748B;
+}
+
+.common:hover {
+    background-color: #F1F5F9;
+    color: white;
+    cursor: pointer;
+}
+
+
+button {
+    background-color: #266DCD;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: "Nunito", sans-serif;
+}
+
+button:hover {
+    background-color: #1F69C9;
+    cursor: pointer;
+}
+
+button .fa-solid {
+    margin-right: 10px;
+    color: white;
+    margin-top: 0px;
+}
+
+.export {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.export-btn {
+    background-color: #266DCD;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: "Nunito", sans-serif;
+}
+
+.user .fa-solid {
+    color: #64748B;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    background-color: #F3F4F5;
+    border-radius: 5px;
+}
+
+.profile p {
+    font-size: 13px;
+}
+
+.circles {
+    display: flex;
+    margin-top: 10px;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #dce3ea;
+    text-align: center;
+    font-size: 15px;
+}
+
+#circle2 {
+    position: relative;
+    left: -20px;
+    top: 0px;
+    /* border: 2px solid white; */
+
+}
+
+#circle3 {
+    position: relative;
+    left: -40px;
+    color: #64748B;
+    /* border: 2px solid white; */
+}
+
+#circle4 {
+    position: relative;
+    left: -65px;
+    color: black;
+    font-weight: 700;
+    background-color: #dce3ea;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+}
+
+.avg {
+    width: 50%;
+    background-color: #1F69C9;
+    color: white;
+}
+
+.avg .text {
+    width: 100%;
+}
+
+.charts {
+    width: 63%;
+    height: 5px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.outer {
+    width: 100%;
+    height: 5px;
+    background-color: #568dd9;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.light {
+    color: #64748B;
+    font-size: 13px;
+}
+
+.performance {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.place {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.perf-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    padding: 20px;
+    background-color: white;
+}
+
+.perf-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    padding: 30px;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.charts1 {
+    width: 80%;
+    height: 6px;
+    background-color: #0059b9;
+    border-radius: 10px;
+}
+
+.charts2 {
+    width: 60%;
+    height: 6px;
+    background-color: #0059b9;
+    border-radius: 10px;
+}
+
+.charts3 {
+    width: 50%;
+    height: 6px;
+    background-color: #0059b9;
+    border-radius: 10px;
+}
+
+.perf-left label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+select {
+    background-color: #F3F4F5;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+}
+
+select option {
+    background-color: white;
+    color: black;
+}
+
+select:hover {
+    cursor: pointer;
+    background-color: #E1E5E9;
+}
+
+select:focus {
+    outline: none;
+    border: none;
+    background-color: #E1E5E9;
+}
+
+.perf-right button {
+    background-color: white;
+    color: #266DCD;
+    width: 25%;
+    border-radius: 10px;
+    font-weight: 900;
+}
+
+.perf-right h3 {
+    font-size: 30px;
+}
+
+.perf-right p {
+    font-size: 17px;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    height: fit-content;
+    padding: 20px;
+    margin: 20px;
+}
+
+.table-wrapper {
+    height: 400px;
+}
+
+th,
+td {
+    border-bottom: 1px solid transparent;
+    padding: 8px;
+    text-align: left;
+}
+
+tr {
+    object-fit: contain;
+}
+
+th {
+    background-color: #F3F4F5;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    background-color: white;
+    padding: 25px;
+}
+
+.list-right {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.amount {
+    font-weight: 600;
+}
+
+.com {
+    color: green;
+}
+
+.full {
+    width: 100px;
+    color: green;
+    font-weight: 600;
+    background-color: #ECFDF5;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.filter {
+    background-color: #D7E2FF;
+    color: #64748B;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: "Nunito", sans-serif;
+}
+
+.filter:hover {
+    cursor: pointer;
+    background-color: #C0D4FF;
+}
+
+.view {
+    color: #64748B;
+    font-size: 16px;
+}
+
+.view:hover {
+    cursor: pointer;
+    color: #356ee9;
+}
+
+.status {
+    border-radius: 20px;
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+}
+
+.flex-container {
+    flex: 1;
+    /* padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; */
+}
+
+.perf-left .outer {
+    background-color: #edeeef;
+}
+
+/* ===== Media Queries ===== */
+
+/* Large screens (1200px+) - default styles apply */
+
+/* Medium screens / Tablets landscape */
+@media (max-width: 1200px) {
+    .left {
+        width: 60px;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .left .head,
+    .left .common p,
+    .left #head .head {
+        display: none;
+    }
+
+    .left #head {
+        justify-content: center;
+    }
+
+    .left .common {
+        justify-content: center;
+    }
+
+    .left .common .fa-solid {
+        margin-right: 0;
+    }
+
+    .left .export-btn {
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left .export-btn .fa-solid {
+        margin-right: 0;
+    }
+
+    .left .export {
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .left .toggle-btn {
+        justify-content: center;
+    }
+
+    .right {
+        margin-left: 60px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .revenue {
+        width: 45%;
+    }
+
+    .avg {
+        width: 100%;
+    }
+
+    .label {
+        width: 250px;
+    }
+
+    .perf-right button {
+        width: 40%;
+    }
+}
+
+/* Tablets portrait */
+@media (max-width: 992px) {
+    .cards {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .revenue {
+        width: 100%;
+    }
+
+    .avg {
+        width: 100%;
+    }
+
+    .performance {
+        flex-direction: column;
+    }
+
+    .perf-left,
+    .perf-right {
+        width: 100%;
+    }
+
+    .label {
+        width: 200px;
+    }
+
+    .user .profile {
+        display: none;
+    }
+}
+
+/* Mobile landscape */
+@media (max-width: 768px) {
+    .left {
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .left.mobile-open {
+        width: 60%;
+        padding: 20px;
+        z-index: 100;
+    }
+
+    .left.mobile-open .head,
+    .left.mobile-open .common p,
+    .left.mobile-open #head .head {
+        display: block;
+    }
+
+    .right {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .right.expanded {
+        margin-left: 0;
+    }
+
+    .toggle-btn {
+        display: none;
+    }
+
+    .search {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search p {
+        font-size: 14px;
+    }
+
+    .label {
+        width: 100%;
+    }
+
+    .top {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .info {
+        margin-right: 0;
+    }
+
+    .cards {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .performance {
+        padding: 10px;
+    }
+
+    .perf-right h3 {
+        font-size: 22px;
+    }
+
+    .perf-right button {
+        width: 50%;
+    }
+
+    .list {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    .revenue {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .perf-right h3 {
+        font-size: 18px;
+    }
+
+    .perf-right button {
+        width: 70%;
+    }
+
+    .info {
+        gap: 10px;
+    }
+
+    table {
+        font-size: 13px;
+        margin: 5px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,370 @@
+{
+    "headers": [
+        "Client",
+        "Product",
+        "Date",
+        "Amount",
+        "Commission",
+        "Status"
+    ],
+    "rows": [
+        {
+            "Client": [
+                {
+                    "value": "Jordan Design Co",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Enterprise License",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Oct 24, 2023",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$12,450.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "+$2,490.00",
+                    "style": [
+                        {
+                            "color": "green"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Completed",
+                    "style": [
+                        {
+                            "color": "green"
+                        },
+                        {
+                            "background-color": "#D1FAE5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Solar Media Group",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Premium API Access",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Oct 24, 2023",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$8,200.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "+$1,640.00",
+                    "style": [
+                        {
+                            "color": "green"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Processing",
+                    "style": [
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "background-color": "#BED2FE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Lunar Tech",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Standard License",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Oct 23, 2023",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$2,100.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "+$420.00",
+                    "style": [
+                        {
+                            "color": "green"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Completed",
+                    "style": [
+                        {
+                            "color": "green"
+                        },
+                        {
+                            "background-color": "#D1FAE5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Vani urad Kineis",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Consulting Services",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Oct 23, 2023",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$5,000.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$0.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Cancelled",
+                    "style": [
+                        {
+                            "color":"red"
+                        },
+                        {
+                            "background-color":"#FFDAD6"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Blue Archeive Ltd",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Security Suite Pro",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Oct 22, 2023",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$15,700.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "+$3,140.00",
+                    "style": [
+                        {
+                            "color": "green"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Completed",
+                    "style": [
+                        {
+                            "color": "green"
+                        },
+                        {
+                            "background-color": "#D1FAE5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

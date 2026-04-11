@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d7df01ffeb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="container">
+        <section class="left">
+            <div class="toggle-btn" onclick="toggleSidebar()">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div id="head">
+                <svg>
+                    <rect x="3" y="3" width="15" height="15" rx="2" />
+                    <rect x="21" y="3" width="15" height="10" rx="2" />
+                    <rect x="21" y="16" width="15" height="15" rx="2" />
+                    <rect x="3" y="20" width="15" height="12" rx="2" />
+                </svg>
+                <div class="head">
+                    <h3>Sales</h3>
+                    <p class="light">ENTERPRISE EDITION</p>
+                </div>
+            </div>
+            <div>
+                <div class="nav">
+                    <div class="active common"><i class="fa-solid fa-gauge" style="color: #3F75ED;"></i>
+                        <p style="color: #3F75ED;">Dashboard</p>
+                    </div>
+                    <div class="common"><i class="fa-solid fa-chart-line"></i>
+                        <p>Analytics</p>
+                    </div>
+                    <div class="common"><i class="fa-solid fa-ticket"></i>
+                        <p>Sales</p>
+                    </div>
+                    <div class="common"><i class="fa-solid fa-box"></i>
+                        <p>Inventory</p>
+                    </div>
+                    <div class="common"><i class="fa-solid fa-users"></i>
+                        <p>Customers</p>
+                    </div>
+                    <div class="common"><i class="fa-solid fa-cog"></i>
+                        <p>Settings</p>
+                    </div>
+                </div>
+            </div>
+            <div class="export">
+                <button class="export-btn"><i class="fa-solid fa-arrow-up-from-bracket"></i><span style="color: white;">Export Report</span></button>
+            </div>
+        </section>
+        <section class="right">
+            <div class="top">
+                <div class="search">
+                    <p>Sales Dashboard</p>
+                    <label for="search" class="label"><i class="fa-solid fa-magnifying-glass"></i> <input type="text"
+                            id="search" placeholder="Search transactions,clients" oninput="nameFinder()"
+                            autocomplete="off"></label>
+                </div>
+                <div class="info">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-circle-question"></i>
+                    <div class="user">
+                        <div class="profile" style="margin-top: 10px;">
+                            <p>Alex Thompson</p>
+                            <p class="light">Sales Leader</p>
+                        </div>
+                        <img src="image.png" alt="profile">
+                    </div>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="cards">
+                    <div class="revenue">
+                        <div class="text">
+                            <span>Total Revenue</span>
+                            <h2 style="font-size: 29px;">$2,482,910.00</h2>
+                            <div class="parts">
+                                <span class="change">12.4%</span>
+                                <p class="light">vs last month</p>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-ticket" id="ticket"></i>
+                        </div>
+                    </div>
+                    <div class="revenue">
+                        <div class="clients">
+                            <p class="light">Active Clients</p>
+                            <h1 style="font-size: 25px;">1,248</h1>
+                            <br></br>
+                            <div class="circles">
+                                <div class="circle" id="circle1">
+                                    <img src="img1.jpg" alt="client" class="circle">
+                                </div>
+                                <div class="circle" id="circle2">
+                                    <img src="img3.jpg" alt="client" class="circle">
+                                </div>
+                                <div class="circle" id="circle3">
+                                    <img src="img2.jpg" alt="client" class="circle">
+                                </div>
+                                <div class="circle" id="circle4">+84</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="revenue avg">
+                        <div class="text">
+                            <p style="font-size: 17px;">AVG.COMMISION</p>
+                            <h1 style="font-size: 25px;">18.5%</h1>
+                            <div class="outer">
+                                <div class="charts"></div>
+                            </div>
+                            <p>Target: 20%</p>
+                        </div>
+                    </div>
+                </div>
+                <section class="table">
+                    <div class="list">
+                        <div class="list-left">
+                            <h2>Recent Transactions</h2>
+                            <p>Real-time update of all sales activity across regions</p>
+                        </div>
+                        <div class="list-right">
+                            <button class="filter">Filter</button>
+                            <p class="view">View All</p>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table></table>
+                    </div>
+                </section>
+                <section class="performance">
+                    <div class="perf-left">
+                        <div class="place">
+                            <h2>Regional Performance</h2>
+                            <select name="North America" id="region">
+                                <option value="North America">North America</option>
+                                <option value="Europe">Europe</option>
+                                <option value="Asia">Asia</option>
+                                <option value="Australia">Australia</option>
+                            </select>
+                        </div>
+                        <label>
+                            <p>Cloud Infrastructure</p>
+                            <p>$8420</p>
+                        </label>
+                        <div class="outer">
+                            <div class="charts1"></div>
+                        </div>
+                        <label>
+                            <p>Security Solutions</p>
+                            <p>$5120</p>
+                        </label>
+                        <div class="outer">
+                            <div class="charts2"></div>
+                        </div>
+                        <label>
+                            <p>Managed Services</p>
+                            <p>$3100</p>
+                        </label>
+                        <div class="outer">
+                            <div class="charts3"></div>
+                        </div>
+                    </div>
+                    <div class="perf-right avg">
+                        <h3>Enterprise Upsell Opportunity</h3>
+                        <p>34 clients are approching their API limit.Review the premium tier proposal to increase
+                            commision
+                            yields by up to 15%</p>
+                        <button>Run Upsell Analysis</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+
+</html>
