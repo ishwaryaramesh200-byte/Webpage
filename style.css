@@ -696,11 +696,6 @@ th {
     background-color: #edeeef;
 }
 
-/* ===== Media Queries ===== */
-
-/* Large screens (1200px+) - default styles apply */
-
-/* Medium screens / Tablets landscape */
 @media (max-width: 1200px) {
     .left {
         width: 60px;
@@ -806,7 +801,6 @@ th {
     }
 }
 
-/* Mobile landscape */
 @media (max-width: 768px) {
     .left {
         width: 0;
@@ -885,7 +879,6 @@ th {
     }
 }
 
-/* Mobile portrait */
 @media (max-width: 480px) {
     .revenue {
         flex-direction: column;
