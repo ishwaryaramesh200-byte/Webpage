@@ -768,7 +768,6 @@ th {
     }
 }
 
-/* Tablets portrait */
 @media (max-width: 992px) {
     .cards {
         flex-direction: column;
