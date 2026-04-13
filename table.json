@@ -15,6 +15,12 @@
                     "style": [
                         {
                             "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
                         }
                     ]
                 }
@@ -27,7 +33,7 @@
                             "font-weight": "300"
                         },
                         {
-                            "color": "#64748B"
+                            "color": "#424752"
                         }
                     ]
                 }
@@ -40,7 +46,7 @@
                             "font-weight": "300"
                         },
                         {
-                            "color": "#64748B"
+                            "color": "#424752"
                         }
                     ]
                 }
@@ -51,6 +57,9 @@
                     "style": [
                         {
                             "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
                         }
                     ]
                 }
@@ -86,6 +95,12 @@
                     "style": [
                         {
                             "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
                         }
                     ]
                 }
@@ -98,7 +113,7 @@
                             "font-weight": "300"
                         },
                         {
-                            "color": "#64748B"
+                            "color": "#424752"
                         }
                     ]
                 }
@@ -111,7 +126,7 @@
                             "font-weight": "300"
                         },
                         {
-                            "color": "#64748B"
+                            "color": "#424752"
                         }
                     ]
                 }
@@ -122,6 +137,9 @@
                     "style": [
                         {
                             "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
                         }
                     ]
                 }
@@ -157,6 +175,12 @@
                     "style": [
                         {
                             "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
                         }
                     ]
                 }
@@ -169,7 +193,7 @@
                             "font-weight": "300"
                         },
                         {
-                            "color": "#64748B"
+                            "color": "#424752"
                         }
                     ]
                 }
@@ -182,7 +206,7 @@
                             "font-weight": "300"
                         },
                         {
-                            "color": "#64748B"
+                            "color": "#424752"
                         }
                     ]
                 }
@@ -193,6 +217,9 @@
                     "style": [
                         {
                             "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
                         }
                     ]
                 }
@@ -228,6 +255,12 @@
                     "style": [
                         {
                             "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
                         }
                     ]
                 }
@@ -240,7 +273,7 @@
                             "font-weight": "300"
                         },
                         {
-                            "color": "#64748B"
+                            "color": "#424752"
                         }
                     ]
                 }
@@ -253,7 +286,7 @@
                             "font-weight": "300"
                         },
                         {
-                            "color": "#64748B"
+                            "color": "#424752"
                         }
                     ]
                 }
@@ -264,6 +297,9 @@
                     "style": [
                         {
                             "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
                         }
                     ]
                 }
@@ -286,10 +322,10 @@
                     "value": "Cancelled",
                     "style": [
                         {
-                            "color":"red"
+                            "color": "red"
                         },
                         {
-                            "background-color":"#FFDAD6"
+                            "background-color": "#FFDAD6"
                         }
                     ]
                 }
@@ -302,6 +338,12 @@
                     "style": [
                         {
                             "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
                         }
                     ]
                 }
@@ -314,7 +356,7 @@
                             "font-weight": "300"
                         },
                         {
-                            "color": "#64748B"
+                            "color": "#424752"
                         }
                     ]
                 }
@@ -327,7 +369,7 @@
                             "font-weight": "300"
                         },
                         {
-                            "color": "#64748B"
+                            "color": "#424752"
                         }
                     ]
                 }
@@ -338,6 +380,9 @@
                     "style": [
                         {
                             "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
                         }
                     ]
                 }
@@ -361,6 +406,331 @@
                         },
                         {
                             "background-color": "#D1FAE5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Greenfield Solutions",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Data Analytics Platform",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Oct 22, 2023",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$9,850.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "+$1,970.00",
+                    "style": [
+                        {
+                            "color": "green"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Processing",
+                    "style": [
+                        {
+                            "color": "#424752"
+                        },
+                        {
+                            "background-color": "#BED2FE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Redwood Enterprises",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Cloud Storage Solutions",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Oct 21, 2023",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$7,300.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "+$1,460.00",
+                    "style": [
+                        {
+                            "color": "green"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Completed",
+                    "style": [
+                        {
+                            "color": "green"
+                        },
+                        {
+                            "background-color": "#D1FAE5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client":[
+                {
+                    "value": "Silverline Corp",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "AI-Powered Chatbot",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Oct 21, 2023",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$11,200.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "+$2,240.00",
+                    "style": [
+                        {
+                            "color": "green"
+                        }
+                    ]
+                }
+            ]
+            ,"Status": [
+                {
+                    "value": "Processing",
+                    "style": [
+                        {
+                            "color": "#424752"
+                        },  
+                        {
+                            "background-color": "#BED2FE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client":[
+                {
+                    "value":"Jordan Technology",
+                    "style":[
+                        {
+                            "font-weight":"600"
+                        },
+                        {
+                            "color":"black"
+                        },
+                        {
+                            "font-size":"16px"
+                        }
+                    ]
+                }
+            ],
+            "Product":[
+                {
+                    "value":"Mobile App Development",
+                    "style":[
+                        {
+                            "font-weight":"300"
+                        },
+                        {
+                            "color":"#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date":[
+                {
+                    "value":"Oct 20, 2023",
+                    "style":[
+                        {
+                            "font-weight":"300"
+                        },
+                        {
+                            "color":"#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount":[
+                {
+                    "value":"$6,500.00",
+                    "style":[
+                        {
+                            "font-weight":"600"
+                        },
+                        {
+                            "color":"black" 
+                        },{
+                            "color":"black"
+                        }
+                    ]
+                }
+            ],
+            "Commission":[
+                {
+                    "value":"$0.00",
+                    "style":[
+                        {  
+                            "font-weight":"300"
+                        },
+                        {
+                            "color":"#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status":[
+                {
+                    "value":"Cancelled",
+                    "style":[
+                        {
+                            "color":"red"
+                        },
+                        {
+                            "background-color":"#FFDAD6"
                         }
                     ]
                 }

@@ -15,10 +15,10 @@
 <body>
     <div id="container">
         <section class="left">
-            <div class="toggle-btn" onclick="toggleSidebar()">
-                <i class="fa-solid fa-arrow-left"></i>
-            </div>
             <div id="head">
+                <div class="toggle-btn" onclick="toggleSidebar()">
+                    <img src="sidebar.png" alt="toggle" id="toggle" style="cursor: pointer;">
+                </div>
                 <svg>
                     <rect x="3" y="3" width="15" height="15" rx="2" />
                     <rect x="21" y="3" width="15" height="10" rx="2" />
@@ -27,13 +27,14 @@
                 </svg>
                 <div class="head">
                     <h3>Sales</h3>
-                    <p class="light">ENTERPRISE EDITION</p>
+                    <p class="light" style="font-size: 14px;">ENTERPRISE EDITION</p>
                 </div>
+                
             </div>
             <div>
                 <div class="nav">
                     <div class="active common"><i class="fa-solid fa-gauge" style="color: #3F75ED;"></i>
-                        <p style="color: #3F75ED;">Dashboard</p>
+                        <p style="color: #3F75ED; font-weight: 700;">Dashboard</p>
                     </div>
                     <div class="common"><i class="fa-solid fa-chart-line"></i>
                         <p>Analytics</p>
@@ -41,10 +42,10 @@
                     <div class="common"><i class="fa-solid fa-ticket"></i>
                         <p>Sales</p>
                     </div>
-                    <div class="common"><i class="fa-solid fa-box"></i>
+                    <div class="common"><i class="fa-solid fa-box-archive"></i>
                         <p>Inventory</p>
                     </div>
-                    <div class="common"><i class="fa-solid fa-users"></i>
+                    <div class="common"><i class="fa-solid fa-user-group"></i>
                         <p>Customers</p>
                     </div>
                     <div class="common"><i class="fa-solid fa-cog"></i>
@@ -53,7 +54,8 @@
                 </div>
             </div>
             <div class="export">
-                <button class="export-btn"><i class="fa-solid fa-arrow-up-from-bracket"></i><span style="color: white;">Export Report</span></button>
+                <button class="export-btn"><i class="fa-solid fa-arrow-up-from-bracket"></i><span
+                        style="color: white;">Export Report</span></button>
             </div>
         </section>
         <section class="right">
@@ -70,7 +72,7 @@
                     <div class="user">
                         <div class="profile" style="margin-top: 10px;">
                             <p>Alex Thompson</p>
-                            <p class="light">Sales Leader</p>
+                            <p class="light" style="font-size: 16px;letter-spacing: normal;">Sales Lead</p>
                         </div>
                         <img src="image.png" alt="profile">
                     </div>
@@ -80,21 +82,21 @@
                 <div class="cards">
                     <div class="revenue">
                         <div class="text">
-                            <span>Total Revenue</span>
-                            <h2 style="font-size: 29px;">$2,482,910.00</h2>
+                            <span>TOTAL REVENUE</span>
+                            <h2 style="font-size: 36px;">$2,482,910.00</h2>
                             <div class="parts">
                                 <span class="change">12.4%</span>
                                 <p class="light">vs last month</p>
                             </div>
                         </div>
-                        <div>
-                            <i class="fa-solid fa-ticket" id="ticket"></i>
+                        <div style="display: flex;align-items: center;">
+                            <i class="fa-solid fa-ticket" id="ticket" style="color:#e8e9e9"></i>
                         </div>
                     </div>
                     <div class="revenue">
                         <div class="clients">
-                            <p class="light">Active Clients</p>
-                            <h1 style="font-size: 25px;">1,248</h1>
+                            <p class="light" style="font-size: 14px;">ACTIVE CLIENTS</p>
+                            <h1 style="font-size: 30px;">1,248</h1>
                             <br></br>
                             <div class="circles">
                                 <div class="circle" id="circle1">
@@ -112,12 +114,12 @@
                     </div>
                     <div class="revenue avg">
                         <div class="text">
-                            <p style="font-size: 17px;">AVG.COMMISION</p>
-                            <h1 style="font-size: 25px;">18.5%</h1>
+                            <p style="font-size: 15px;font-weight: 500;">AVG.COMMISION</p>
+                            <h1 style="font-size: 30px;">18.5%</h1>
                             <div class="outer">
                                 <div class="charts"></div>
                             </div>
-                            <p>Target: 20%</p>
+                            <p style="font-size: 15px;font-weight: 500;">Target: 20%</p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +127,7 @@
                     <div class="list">
                         <div class="list-left">
                             <h2>Recent Transactions</h2>
-                            <p>Real-time update of all sales activity across regions</p>
+                            <p style="font-size: 16px;">Real-time update of all sales activity across regions</p>
                         </div>
                         <div class="list-right">
                             <button class="filter">Filter</button>
@@ -148,21 +150,21 @@
                             </select>
                         </div>
                         <label>
-                            <p>Cloud Infrastructure</p>
+                            <p style="color: black; font-size: 16px; font-weight: 700;">Cloud Infrastructure</p>
                             <p>$8420</p>
                         </label>
                         <div class="outer">
                             <div class="charts1"></div>
                         </div>
                         <label>
-                            <p>Security Solutions</p>
+                            <p style="color: black; font-size: 16px; font-weight: 700;">Security Solutions</p>
                             <p>$5120</p>
                         </label>
                         <div class="outer">
                             <div class="charts2"></div>
                         </div>
                         <label>
-                            <p>Managed Services</p>
+                            <p style="color: black; font-size: 16px; font-weight: 700;">Managed Services</p>
                             <p>$3100</p>
                         </label>
                         <div class="outer">
