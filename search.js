@@ -29,6 +29,15 @@ fetch("table.json")
                 if (cellData === rowData.Product[0]) {
                     cell.classList.add("product");
                 }
+                if (cellData === rowData.Date[0]) {
+                    cell.classList.add("date");
+                }
+                if (cellData === rowData.Amount[0]) {
+                    cell.classList.add("amount");
+                }
+                if (cellData === rowData.Commission[0]) {
+                    cell.classList.add("commission");
+                }
                 if (cellData === rowData.Status[0]) {
                     let div = document.createElement("div");
                     div.classList.add("status");
@@ -75,9 +84,13 @@ function nameFinder() {
         return;
     }
 
-    if (values.includes("client:") || values.includes("product:")) {
+    if (values.includes("client:") || values.includes("product:") || values.includes("date:") || values.includes("amount:") || values.includes("commission:") || values.includes("status:")) {
         let clientSearch = null;
         let productSearch = null;
+        let dateSearch = null;
+        let amountSearch = null;
+        let commissionSearch = null;
+        let statusSearch = null;
 
         let parts = values.split(",");
         parts.forEach(part => {
@@ -86,19 +99,41 @@ function nameFinder() {
                 clientSearch = part.split("client:")[1].trim();
             } else if (part.startsWith("product:")) {
                 productSearch = part.split("product:")[1].trim();
+            } else if (part.startsWith("date:")) {
+                dateSearch = part.split("date:")[1].trim();
+            } else if (part.startsWith("amount:")) {
+                amountSearch = part.split("amount:")[1].trim();
+            } else if (part.startsWith("commission:")) {
+                commissionSearch = part.split("commission:")[1].trim();
+            } else if (part.startsWith("status:")) {
+                statusSearch = part.split("status:")[1].trim();
             }
         });
 
         let clients = document.querySelectorAll(".client");
         let products = document.querySelectorAll(".product");
+        let dates = document.querySelectorAll(".date");
+        let amounts = document.querySelectorAll(".amount");
+        let commissions = document.querySelectorAll(".commission");
+        let statuses = document.querySelectorAll(".status");
+
 
         for (let i = 0; i < clients.length; i++) {
             let clientName = clients[i].textContent.toLowerCase();
             let productName = products[i].textContent.toLowerCase();
+            let dateValue = dates[i].textContent.toLowerCase();
+            let amountValue = amounts[i].textContent.toLowerCase();
+            let commissionValue = commissions[i].textContent.toLowerCase();
+            let statusValue = statuses[i].textContent.toLowerCase();
+
             let clientMatch = clientSearch === null || clientSearch === "" || clientName.includes(clientSearch);
             let productMatch = productSearch === null || productSearch === "" || productName.includes(productSearch);
+            let dateMatch = dateSearch === null || dateSearch === "" || dateValue.includes(dateSearch);
+            let amountMatch = amountSearch === null || amountSearch === "" || amountValue.includes(amountSearch);
+            let commissionMatch = commissionSearch === null || commissionSearch === "" || commissionValue.includes(commissionSearch);
+            let statusMatch = statusSearch === null || statusSearch === "" || statusValue.includes(statusSearch);
 
-            if (clientMatch && productMatch) {
+            if (clientMatch && productMatch && dateMatch && amountMatch && commissionMatch && statusMatch) {
                 clients[i].parentElement.style.display = "table-row";
                 matchCount++;
             } else {
