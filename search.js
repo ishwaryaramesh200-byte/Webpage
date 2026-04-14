@@ -141,6 +141,7 @@ function nameFinder() {
             }
         }
     }
+    
 
     if (matchCount === 0) {
         if (!noResultsRow) {
