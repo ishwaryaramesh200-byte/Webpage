@@ -628,7 +628,7 @@ button .fa-solid {
     padding: 30px;
     font-weight: 500;
     border-radius: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
     overflow-wrap: break-word;
     word-break: break-word;
 }
@@ -835,7 +835,6 @@ th {
 
 .flex-container {
     flex: 1;
-    overflow: hidden;
 }
 
 .perf-left .outer {
