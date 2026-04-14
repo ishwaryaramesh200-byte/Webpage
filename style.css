@@ -51,7 +51,7 @@ body {
     display: none;
 }
 
-.left.collapsed nav{
+.left.collapsed nav {
     margin-top: 10px;
 }
 
@@ -129,7 +129,7 @@ body {
 
 .left.collapsed #toggle {
     position: absolute;
-    top:-8px;
+    top: -8px;
     left: -1px;
 }
 
