@@ -5,6 +5,14 @@ function toggleSidebar() {
     content.classList.toggle('expanded');
 }
 
+function checkClick(event) {
+    console.log("checked");
+    if (event.key === ":") {
+        console.log(": clicked");
+        nameFinder();
+    }
+}
+
 fetch("table.json")
     .then(response => response.json())
     .then(data => {
@@ -84,7 +92,17 @@ function nameFinder() {
         return;
     }
 
+    if (values === "client:" || values === "product:" || values === "date:" || values === "amount:" || values === "commission:" || values === "status:") {
+        console.log("Empty search");
+        results.forEach(r => r.parentElement.style.display = "table-row");
+        if (noResultsRow) {
+            noResultsRow.style.display = "none";
+        }
+        return;
+    }
+
     if (values.includes("client:") || values.includes("product:") || values.includes("date:") || values.includes("amount:") || values.includes("commission:") || values.includes("status:")) {
+        console.log("Advanced search");
         let clientSearch = null;
         let productSearch = null;
         let dateSearch = null;
@@ -141,7 +159,7 @@ function nameFinder() {
             }
         }
     }
-    
+
 
     if (matchCount === 0) {
         if (!noResultsRow) {
