@@ -69,7 +69,9 @@ function nameFinder() {
 
     if (values === "") {
         results.forEach(r => r.parentElement.style.display = "table-row");
-        if (noResultsRow) noResultsRow.style.display = "none";
+        if (noResultsRow) {
+            noResultsRow.style.display = "none";
+        }
         return;
     }
 
