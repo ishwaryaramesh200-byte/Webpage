@@ -92,85 +92,86 @@ function nameFinder() {
         return;
     }
 
-    if (values === "client:" || values === "product:" || values === "date:" || values === "amount:" || values === "commission:" || values === "status:") {
+    if (values.startsWith("client:") || values.startsWith("product:") || values.startsWith("date:") || values.startsWith("amount:") || values.startsWith("commission:") || values.startsWith("status:")) {
         console.log("Empty search");
+        if (values.includes("client:") || values.includes("product:") || values.includes("date:") || values.includes("amount:") || values.includes("commission:") || values.includes("status:")) {
+            console.log("Empty search with field");
+            let clientSearch = null;
+            let productSearch = null;
+            let dateSearch = null;
+            let amountSearch = null;
+            let commissionSearch = null;
+            let statusSearch = null;
+
+            let parts = values.split(",");
+            parts.forEach(part => {
+                console.log("Part:", part);
+                part = part.trim();
+                if (part.startsWith("client:")) {
+                    clientSearch = part.split("client:")[1].trim();
+                    console.log("Client search:", clientSearch);
+                } else if (part.startsWith("product:")) {
+                    productSearch = part.split("product:")[1].trim();
+                } else if (part.startsWith("date:")) {
+                    dateSearch = part.split("date:")[1].trim();
+                } else if (part.startsWith("amount:")) {
+                    amountSearch = part.split("amount:")[1].trim();
+                } else if (part.startsWith("commission:")) {
+                    commissionSearch = part.split("commission:")[1].trim();
+                } else if (part.startsWith("status:")) {
+                    statusSearch = part.split("status:")[1].trim();
+                }
+            });
+
+            let clients = document.querySelectorAll(".client");
+            let products = document.querySelectorAll(".product");
+            let dates = document.querySelectorAll(".date");
+            let amounts = document.querySelectorAll(".amount");
+            let commissions = document.querySelectorAll(".commission");
+            let statuses = document.querySelectorAll(".status");
+
+
+            for (let i = 0; i < clients.length; i++) {
+                let clientName = clients[i].textContent.toLowerCase();
+                let productName = products[i].textContent.toLowerCase();
+                let dateValue = dates[i].textContent.toLowerCase();
+                let amountValue = amounts[i].textContent.toLowerCase();
+                let commissionValue = commissions[i].textContent.toLowerCase();
+                let statusValue = statuses[i].textContent.toLowerCase();
+
+                let clientMatch = clientSearch === null || clientSearch === "" || clientName.includes(clientSearch);
+                let productMatch = productSearch === null || productSearch === "" || productName.includes(productSearch);
+                let dateMatch = dateSearch === null || dateSearch === "" || dateValue.includes(dateSearch);
+                let amountMatch = amountSearch === null || amountSearch === "" || amountValue.includes(amountSearch);
+                let commissionMatch = commissionSearch === null || commissionSearch === "" || commissionValue.includes(commissionSearch);
+                let statusMatch = statusSearch === null || statusSearch === "" || statusValue.includes(statusSearch);
+
+                if (clientMatch && productMatch && dateMatch && amountMatch && commissionMatch && statusMatch) {
+                    clients[i].parentElement.style.display = "table-row";
+                    matchCount++;
+                } else {
+                    clients[i].parentElement.style.display = "none";
+                }
+            }
+        }
+
+
+        if (matchCount === 0) {
+            if (!noResultsRow) {
+                const table = document.querySelector(".table table");
+                noResultsRow = document.createElement("tr");
+                noResultsRow.id = "no-results";
+                noResultsRow.innerHTML = '<td colspan="6" style="text-align:center; padding:20px; color:#888;">No results found</td>';
+                table.appendChild(noResultsRow);
+            }
+            noResultsRow.style.display = "table-row";
+        } else if (noResultsRow) {
+            noResultsRow.style.display = "none";
+        }
+    } else {
         results.forEach(r => r.parentElement.style.display = "table-row");
         if (noResultsRow) {
             noResultsRow.style.display = "none";
         }
-        return;
-    }
-
-    if (values.includes("client:") || values.includes("product:") || values.includes("date:") || values.includes("amount:") || values.includes("commission:") || values.includes("status:")) {
-        console.log("Advanced search");
-        let clientSearch = null;
-        let productSearch = null;
-        let dateSearch = null;
-        let amountSearch = null;
-        let commissionSearch = null;
-        let statusSearch = null;
-
-        let parts = values.split(",");
-        parts.forEach(part => {
-            part = part.trim();
-            if (part.startsWith("client:")) {
-                clientSearch = part.split("client:")[1].trim();
-            } else if (part.startsWith("product:")) {
-                productSearch = part.split("product:")[1].trim();
-            } else if (part.startsWith("date:")) {
-                dateSearch = part.split("date:")[1].trim();
-            } else if (part.startsWith("amount:")) {
-                amountSearch = part.split("amount:")[1].trim();
-            } else if (part.startsWith("commission:")) {
-                commissionSearch = part.split("commission:")[1].trim();
-            } else if (part.startsWith("status:")) {
-                statusSearch = part.split("status:")[1].trim();
-            }
-        });
-
-        let clients = document.querySelectorAll(".client");
-        let products = document.querySelectorAll(".product");
-        let dates = document.querySelectorAll(".date");
-        let amounts = document.querySelectorAll(".amount");
-        let commissions = document.querySelectorAll(".commission");
-        let statuses = document.querySelectorAll(".status");
-
-
-        for (let i = 0; i < clients.length; i++) {
-            let clientName = clients[i].textContent.toLowerCase();
-            let productName = products[i].textContent.toLowerCase();
-            let dateValue = dates[i].textContent.toLowerCase();
-            let amountValue = amounts[i].textContent.toLowerCase();
-            let commissionValue = commissions[i].textContent.toLowerCase();
-            let statusValue = statuses[i].textContent.toLowerCase();
-
-            let clientMatch = clientSearch === null || clientSearch === "" || clientName.includes(clientSearch);
-            let productMatch = productSearch === null || productSearch === "" || productName.includes(productSearch);
-            let dateMatch = dateSearch === null || dateSearch === "" || dateValue.includes(dateSearch);
-            let amountMatch = amountSearch === null || amountSearch === "" || amountValue.includes(amountSearch);
-            let commissionMatch = commissionSearch === null || commissionSearch === "" || commissionValue.includes(commissionSearch);
-            let statusMatch = statusSearch === null || statusSearch === "" || statusValue.includes(statusSearch);
-
-            if (clientMatch && productMatch && dateMatch && amountMatch && commissionMatch && statusMatch) {
-                clients[i].parentElement.style.display = "table-row";
-                matchCount++;
-            } else {
-                clients[i].parentElement.style.display = "none";
-            }
-        }
-    }
-
-
-    if (matchCount === 0) {
-        if (!noResultsRow) {
-            const table = document.querySelector(".table table");
-            noResultsRow = document.createElement("tr");
-            noResultsRow.id = "no-results";
-            noResultsRow.innerHTML = '<td colspan="6" style="text-align:center; padding:20px; color:#888;">No results found</td>';
-            table.appendChild(noResultsRow);
-        }
-        noResultsRow.style.display = "table-row";
-    } else if (noResultsRow) {
-        noResultsRow.style.display = "none";
     }
 }
