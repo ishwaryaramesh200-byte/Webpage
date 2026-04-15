@@ -5,11 +5,17 @@ function toggleSidebar() {
     content.classList.toggle('expanded');
 }
 
-function checkClick(event) {
-    console.log("checked");
-    if (event.key === ":") {
-        console.log(": clicked");
-        nameFinder();
+const debounceNameFinder = debounce(nameFinder, 1000);
+
+function debounce(func, delay) {
+    console.log("Debounce function created with delay:", delay);
+    let timer;
+
+    return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            func.apply(this, args);
+        }, delay);
     }
 }
 
@@ -21,7 +27,18 @@ fetch("table.json")
         let headerRow = document.createElement("tr");
         data.headers.forEach(headerText => {
             let header = document.createElement("th");
-            header.textContent = headerText;
+            if (headerText == "Status") {
+                header.textContent = headerText;
+                headerRow.appendChild(header);
+                return;
+            }
+            let wrapper = document.createElement("div");
+            wrapper.classList.add("th-wrapper");
+            let span = document.createElement("span");
+            span.textContent = headerText;
+            wrapper.appendChild(span);
+            wrapper.innerHTML += '<div class="sort-icons" onclick="sortTable(this, \'' + headerText + '\')"><i class="fa-solid fa-sort-down"></i></div>';
+            header.appendChild(wrapper);
             headerRow.appendChild(header);
         });
         table.appendChild(headerRow);
@@ -70,6 +87,20 @@ fetch("table.json")
             table.appendChild(row);
         });
 
+        // Default sort by Client ascending
+        let clientHeader = document.querySelector(".sort-icons");
+        if (clientHeader) {
+            let icon = clientHeader.querySelector("i");
+            icon.classList.remove("fa-sort-down");
+            icon.classList.add("fa-sort-up");
+            let rows = Array.from(table.querySelectorAll("tr")).slice(1);
+            rows.sort((a, b) => {
+                let cellA = a.children[0].textContent.trim().toLowerCase();
+                let cellB = b.children[0].textContent.trim().toLowerCase();
+                return cellA.localeCompare(cellB);
+            });
+            rows.forEach(row => table.appendChild(row));
+        }
 
     })
     .catch(error => {
@@ -175,3 +206,63 @@ function nameFinder() {
         }
     }
 }
+
+function sortTable(iconDiv, value) {
+    console.log("sorting the table of ", value);
+    let table = document.querySelector(".table table");
+    let rows = Array.from(table.querySelectorAll("tr")).slice(1);
+    let headerIndex = Array.from(table.querySelectorAll("th")).findIndex(th => th.textContent == value);
+    if (headerIndex == -1) {
+        return;
+    }
+
+    let icon = iconDiv.querySelector("i");
+    let isCurrentlyUp = icon.classList.contains("fa-sort-up");
+
+    document.querySelectorAll(".sort-icons i").forEach(i => {
+        i.classList.remove("fa-sort-up");
+        i.classList.add("fa-sort-down");
+    });
+
+    let descending;
+    if (isCurrentlyUp) {
+        icon.classList.remove("fa-sort-up");
+        icon.classList.add("fa-sort-down");
+        descending = true;
+    } else {
+        icon.classList.remove("fa-sort-down");
+        icon.classList.add("fa-sort-up");
+        descending = false;
+    }
+
+    rows.sort((a, b) => {
+        let cellA = a.children[headerIndex].textContent.trim();
+        let cellB = b.children[headerIndex].textContent.trim();
+
+        let moneyA = parseFloat(cellA.replace(/[^0-9.\-]/g, ''));
+        let moneyB = parseFloat(cellB.replace(/[^0-9.\-]/g, ''));
+
+        if (!isNaN(moneyA) && !isNaN(moneyB) && /[\$]/.test(cellA)) {
+            return descending ? moneyB - moneyA : moneyA - moneyB;
+        }
+
+        let dateA = new Date(cellA);
+        let dateB = new Date(cellB);
+        if (!isNaN(dateA.getTime()) && !isNaN(dateB.getTime())) {
+            return descending ? dateB - dateA : dateA - dateB;
+        }
+
+        let numA = parseFloat(cellA);
+        let numB = parseFloat(cellB);
+        if (!isNaN(numA) && !isNaN(numB)) {
+            return descending ? numB - numA : numA - numB;
+        }
+
+        return descending
+            ? cellB.toLowerCase().localeCompare(cellA.toLowerCase())
+            : cellA.toLowerCase().localeCompare(cellB.toLowerCase());
+    });
+
+    rows.forEach(row => table.appendChild(row));
+}
+

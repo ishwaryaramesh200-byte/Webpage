@@ -572,7 +572,7 @@
             ]
         },
         {
-            "Client":[
+            "Client": [
                 {
                     "value": "Silverline Corp",
                     "style": [
@@ -636,14 +636,14 @@
                         }
                     ]
                 }
-            ]
-            ,"Status": [
+            ],
+            "Status": [
                 {
                     "value": "Processing",
                     "style": [
                         {
                             "color": "#424752"
-                        },  
+                        },
                         {
                             "background-color": "#BED2FE"
                         }
@@ -652,85 +652,1376 @@
             ]
         },
         {
-            "Client":[
+            "Client": [
                 {
-                    "value":"Jordan Technology",
-                    "style":[
+                    "value": "Jordan Technology",
+                    "style": [
                         {
-                            "font-weight":"600"
+                            "font-weight": "600"
                         },
                         {
-                            "color":"black"
+                            "color": "black"
                         },
                         {
-                            "font-size":"16px"
+                            "font-size": "16px"
                         }
                     ]
                 }
             ],
-            "Product":[
+            "Product": [
                 {
-                    "value":"Mobile App Development",
-                    "style":[
+                    "value": "Mobile App Development",
+                    "style": [
                         {
-                            "font-weight":"300"
+                            "font-weight": "300"
                         },
                         {
-                            "color":"#424752"
+                            "color": "#424752"
                         }
                     ]
                 }
             ],
-            "Date":[
+            "Date": [
                 {
-                    "value":"Oct 20, 2023",
-                    "style":[
+                    "value": "Oct 20, 2023",
+                    "style": [
                         {
-                            "font-weight":"300"
+                            "font-weight": "300"
                         },
                         {
-                            "color":"#424752"
+                            "color": "#424752"
                         }
                     ]
                 }
             ],
-            "Amount":[
+            "Amount": [
                 {
-                    "value":"$6,500.00",
-                    "style":[
+                    "value": "$6,500.00",
+                    "style": [
                         {
-                            "font-weight":"600"
+                            "font-weight": "600"
                         },
                         {
-                            "color":"black" 
-                        },{
-                            "color":"black"
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
                         }
                     ]
                 }
             ],
-            "Commission":[
+            "Commission": [
                 {
-                    "value":"$0.00",
-                    "style":[
-                        {  
-                            "font-weight":"300"
+                    "value": "$0.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
                         },
                         {
-                            "color":"#64748B"
+                            "color": "#64748B"
                         }
                     ]
                 }
             ],
-            "Status":[
+            "Status": [
                 {
-                    "value":"Cancelled",
-                    "style":[
+                    "value": "Cancelled",
+                    "style": [
                         {
-                            "color":"red"
+                            "color": "red"
                         },
                         {
-                            "background-color":"#FFDAD6"
+                            "background-color": "#FFDAD6"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Alpha Corp",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Web Development",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Jan 12, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$3,200.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$200.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Completed",
+                    "style": [
+                        {
+                            "color": "green"
+                        },
+                        {
+                            "background-color": "#DCFCE7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Beta Solutions",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "UI/UX Design",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Feb 05, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$1,800.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$150.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Pending",
+                    "style": [
+                        {
+                            "color": "orange"
+                        },
+                        {
+                            "background-color": "#FEF3C7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Gamma Tech",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "SEO Optimization",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Mar 18, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$950.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$50.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Completed",
+                    "style": [
+                        {
+                            "color": "green"
+                        },
+                        {
+                            "background-color": "#DCFCE7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Delta Systems",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Cloud Setup",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Apr 02, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$4,500.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$300.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "In Progress",
+                    "style": [
+                        {
+                            "color": "blue"
+                        },
+                        {
+                            "background-color": "#DBEAFE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Epsilon Ltd",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "App Maintenance",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "May 11, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$2,100.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$120.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Completed",
+                    "style": [
+                        {
+                            "color": "green"
+                        },
+                        {
+                            "background-color": "#DCFCE7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Zeta Innovations",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "API Development",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Jun 21, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$5,700.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$400.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Cancelled",
+                    "style": [
+                        {
+                            "color": "red"
+                        },
+                        {
+                            "background-color": "#FFDAD6"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Eta Services",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Testing",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Jul 09, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$800.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$40.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Pending",
+                    "style": [
+                        {
+                            "color": "orange"
+                        },
+                        {
+                            "background-color": "#FEF3C7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Theta Labs",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "AI Integration",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Aug 14, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$9,000.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$700.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "In Progress",
+                    "style": [
+                        {
+                            "color": "blue"
+                        },
+                        {
+                            "background-color": "#DBEAFE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Iota Digital",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Marketing",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Sep 03, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$2,750.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$180.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Completed",
+                    "style": [
+                        {
+                            "color": "green"
+                        },
+                        {
+                            "background-color": "#DCFCE7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Kappa Enterprises",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Consulting",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Oct 25, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$1,200.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$90.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Pending",
+                    "style": [
+                        {
+                            "color": "orange"
+                        },
+                        {
+                            "background-color": "#FEF3C7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Lambda Corp",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "E-commerce Development",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Nov 02, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$6,800.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$500.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Completed",
+                    "style": [
+                        {
+                            "color": "green"
+                        },
+                        {
+                            "background-color": "#DCFCE7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Mu Technologies",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Data Analytics",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Dec 15, 2024",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$3,900.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$250.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "In Progress",
+                    "style": [
+                        {
+                            "color": "blue"
+                        },
+                        {
+                            "background-color": "#DBEAFE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Nu Solutions",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Cyber Security",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Jan 08, 2025",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$7,250.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$600.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Cancelled",
+                    "style": [
+                        {
+                            "color": "red"
+                        },
+                        {
+                            "background-color": "#FFDAD6"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Xi Enterprises",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Blockchain Development",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Feb 19, 2025",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$8,400.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$750.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Completed",
+                    "style": [
+                        {
+                            "color": "green"
+                        },
+                        {
+                            "background-color": "#DCFCE7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Client": [
+                {
+                    "value": "Omicron Labs",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "font-size": "16px"
+                        }
+                    ]
+                }
+            ],
+            "Product": [
+                {
+                    "value": "Game Development",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Date": [
+                {
+                    "value": "Mar 10, 2025",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#424752"
+                        }
+                    ]
+                }
+            ],
+            "Amount": [
+                {
+                    "value": "$5,300.00",
+                    "style": [
+                        {
+                            "font-weight": "600"
+                        },
+                        {
+                            "color": "black"
+                        },
+                        {
+                            "color": "black"
+                        }
+                    ]
+                }
+            ],
+            "Commission": [
+                {
+                    "value": "$350.00",
+                    "style": [
+                        {
+                            "font-weight": "300"
+                        },
+                        {
+                            "color": "#64748B"
+                        }
+                    ]
+                }
+            ],
+            "Status": [
+                {
+                    "value": "Pending",
+                    "style": [
+                        {
+                            "color": "orange"
+                        },
+                        {
+                            "background-color": "#FEF3C7"
                         }
                     ]
                 }

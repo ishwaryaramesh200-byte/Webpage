@@ -386,7 +386,6 @@ p {
 }
 
 span {
-    color: #0059b9;
     font-weight: 600;
     font-size: 16px;
 }
@@ -723,7 +722,20 @@ table {
     min-height: 400px;
 }
 
-th,
+th{
+    border-bottom: 1px solid transparent;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+    color: #64748B;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    width: 120px;
+}
+
+
+
 td {
     border-bottom: 1px solid transparent;
     padding: 10px;
@@ -839,6 +851,25 @@ th {
 
 .perf-left .outer {
     background-color: #edeeef;
+}
+
+.sort-icons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.sort-icons i {
+    font-size: 14px;
+    color: #64748B;
+}
+
+.th-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 @media (max-width: 1200px) {
