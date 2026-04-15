@@ -864,12 +864,21 @@ th {
 .sort-icons i {
     font-size: 14px;
     color: #64748B;
+    position: relative;
+}
+
+.sort-icons i.fa-sort-up {
+    top: 3px;
+}
+
+.sort-icons i.fa-sort-down {
+    top: -3px;
 }
 
 .th-wrapper {
     display: flex;
     align-items: center;
-    gap: 5px;
+    /* gap: 5px; */
 }
 
 @media (max-width: 1200px) {

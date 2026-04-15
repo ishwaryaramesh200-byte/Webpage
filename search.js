@@ -87,7 +87,6 @@ fetch("table.json")
             table.appendChild(row);
         });
 
-        // Default sort by Client ascending
         let clientHeader = document.querySelector(".sort-icons");
         if (clientHeader) {
             let icon = clientHeader.querySelector("i");
