@@ -258,8 +258,6 @@ rect {
     margin-top: 10px;
     font-weight: 500;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .search .fa-solid {
