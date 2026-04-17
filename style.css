@@ -14,8 +14,14 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    overflow-wrap: break-word;
-    word-break: break-word;
+}
+
+h2,
+h3,
+h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #container {
@@ -28,7 +34,7 @@ body {
 }
 
 .left {
-    width: 18%;
+    width: 300px;
     height: 100%;
     background-color: #F8FAFC;
     display: flex;
@@ -40,7 +46,6 @@ body {
     z-index: 10;
     overflow: hidden;
     white-space: nowrap;
-    overflow-wrap: break-word;
 }
 
 .left.collapsed {
@@ -105,6 +110,7 @@ body {
     justify-content: flex-end;
     cursor: pointer;
     position: absolute;
+    top: 10px;
     right: 20px;
     cursor: pointer;
 }
@@ -163,20 +169,19 @@ body {
 }
 
 .right {
+    width: calc(100% - 300px);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    flex-basis: 82%;
     background-color: #F8F9FA;
     gap: 15px;
-    margin-left: 18%;
+    margin-left: 300px;
     height: 100vh;
     transition: margin-left 0.3s ease;
 }
 
 .right.expanded {
     margin-left: 120px;
-    flex-basis: calc(100% - 120px);
     width: calc(100% - 120px);
 }
 
@@ -194,11 +199,16 @@ ol {
 
 .active div {
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     min-width: 0;
 }
 
 .active p {
     font-weight: 800;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .active .fa-solid {
@@ -251,13 +261,20 @@ rect {
     padding: 10px;
     flex: 1;
     min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .search p {
+    width: 200px;
     font-size: 20px;
     margin-top: 10px;
     font-weight: 500;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
 }
 
 .search .fa-solid {
@@ -346,6 +363,9 @@ input:focus {
 
 p {
     font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .cards {
@@ -353,6 +373,8 @@ p {
     flex-direction: row;
     gap: 30px;
     padding: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .revenue {
@@ -367,7 +389,20 @@ p {
     border-radius: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
-    word-break: break-word;
+    white-space: nowrap;
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+
 }
 
 .revenue .fa-solid {
@@ -386,6 +421,9 @@ p {
 span {
     font-weight: 600;
     font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .change {
@@ -402,13 +440,6 @@ span {
 
 #ticket {
     font-size: 70px;
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 70%;
 }
 
 .nav {
@@ -495,6 +526,9 @@ button .fa-solid {
     border-radius: 5px;
     font-size: 15px;
     font-family: "Manrope", sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
 }
 
@@ -627,7 +661,11 @@ button .fa-solid {
     border-radius: 20px;
     /* overflow: hidden; */
     overflow-wrap: break-word;
-    word-break: break-word;
+}
+
+.perf-right p {
+    overflow: hidden;
+    white-space:normal;
 }
 
 .charts1 {
@@ -686,13 +724,12 @@ select:focus {
 .perf-right button {
     background-color: white;
     color: #266DCD;
-    width: 25%;
     border-radius: 10px;
     font-weight: 900;
 }
 
 .perf-right h3 {
-    font-size: 30px;
+    font-size: 25px;
     overflow-wrap: break-word;
     word-break: break-word;
 }
@@ -711,6 +748,7 @@ table {
     padding: 20px;
     margin: 20px;
     overflow-y: scroll;
+    table-layout: fixed;
 }
 
 .table-wrapper {
@@ -720,7 +758,7 @@ table {
     min-height: 400px;
 }
 
-th{
+th {
     border-bottom: 1px solid transparent;
     padding: 10px;
     text-align: left;
@@ -728,10 +766,15 @@ th{
     color: #64748B;
     overflow: hidden;
     text-overflow: ellipsis;
-    word-break: break-word;
-    width: 120px;
+    white-space: nowrap;
 }
 
+.client {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
 
 
 td {
@@ -742,8 +785,7 @@ td {
     color: #64748B;
     overflow: hidden;
     text-overflow: ellipsis;
-    word-break: break-word;
-    width: 120px;
+    white-space: nowrap;
 }
 
 tr {
@@ -843,9 +885,9 @@ th {
     white-space: nowrap;
 }
 
-.flex-container {
+/* .flex-container {
     flex: 1;
-}
+} */
 
 .perf-left .outer {
     background-color: #edeeef;
@@ -877,78 +919,6 @@ th {
     display: flex;
     align-items: center;
     /* gap: 5px; */
-}
-
-@media (max-width: 1200px) {
-    .left {
-        width: 60px;
-        padding: 10px;
-        align-items: center;
-    }
-
-    .left .head,
-    .left .common p,
-    .left #head .head {
-        display: none;
-    }
-
-    .left #head {
-        justify-content: center;
-    }
-
-    .left .common {
-        justify-content: center;
-    }
-
-    .left .common .fa-solid {
-        margin-right: 0;
-    }
-
-    .left .export-btn {
-        padding: 10px;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .left .export-btn .fa-solid {
-        margin-right: 0;
-    }
-
-    .left .export {
-        padding-left: 0;
-        justify-content: center;
-    }
-
-    .left .toggle-btn {
-        justify-content: center;
-    }
-
-    .right {
-        margin-left: 60px;
-    }
-
-    .cards {
-        flex-wrap: wrap;
-    }
-
-    .revenue {
-        width: 45%;
-    }
-
-    .avg {
-        width: 100%;
-    }
-
-    .label {
-        width: 250px;
-    }
-
-    .perf-right button {
-        width: 40%;
-    }
 }
 
 @media (max-width: 992px) {
@@ -1090,5 +1060,59 @@ th {
 
     .table-wrapper {
         overflow-x: auto;
+    }
+}
+
+@media (max-width:1024px) {
+    #container {
+        flex-direction: row;
+    }
+
+    .left {
+        width: 250px;
+        padding: 20px;
+        position: fixed;
+    }
+
+    #toggle {
+        position: absolute;
+        top: 10px;
+        left: -20px;
+    }
+
+    .left.collapsed {
+        width: 120px;
+    }
+
+    .right {
+        width: calc(100% - 250px);
+        margin-left: 250px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .revenue {
+        width: 100%;
+    }
+
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .performance {
+        flex-wrap: wrap;
+    }
+
+    .perf-left,
+    .perf-right {
+        width: 100%;
+    }
+
+    .search p {
+        display: none;
     }
 }
