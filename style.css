@@ -588,6 +588,7 @@ button .fa-solid {
     align-items: center;
     width: 60px;
     height: 60px;
+    padding: 20px;
 }
 
 .avg {
@@ -695,14 +696,14 @@ button .fa-solid {
     justify-content: space-between;
 }
 
-select {
+select{
     background-color: #F3F4F5;
+    color: #64748B;
     border: none;
+    padding: 10px;
     border-radius: 5px;
-    padding: 15px;
+    font-size: 15px;
     font-family: "Manrope", sans-serif;
-
-    font-weight: 400;
 }
 
 select option {
@@ -918,10 +919,9 @@ th {
 .th-wrapper {
     display: flex;
     align-items: center;
-    /* gap: 5px; */
 }
 
-@media (max-width: 992px) {
+@media (max-width: 999px) {
     .cards {
         flex-direction: column;
         align-items: stretch;
@@ -1114,5 +1114,145 @@ th {
 
     .search p {
         display: none;
+    }
+
+    table{
+        margin: 0px;
+    }
+
+    .table-wrapper{
+        overflow: scroll;
+    }
+}
+
+@media (max-width: 768px) {
+    .left {
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .left.mobile-open {
+        width: 60%;
+        padding: 20px;
+        z-index: 100;
+    }
+
+    .left.mobile-open .head,
+    .left.mobile-open .common p,
+    .left.mobile-open #head .head {
+        display: block;
+    }
+
+    .right {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .right.expanded {
+        margin-left: 0;
+    }
+
+    .toggle-btn {
+        display: none;
+    }
+
+    .search {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search p {
+        font-size: 14px;
+    }
+
+    .label {
+        width: 100%;
+    }
+
+    .top {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .info {
+        margin-right: 0;
+    }
+
+    .cards {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .performance {
+        padding: 10px;
+    }
+
+    .perf-right h3 {
+        font-size: 22px;
+    }
+
+    .perf-right button {
+        width: 50%;
+    }
+
+    .list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table{
+        table-layout: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .revenue {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .perf-right h3 {
+        font-size: 18px;
+    }
+
+    .perf-right button {
+        width: 70%;
+    }
+
+    .info {
+        gap: 10px;
+    }
+
+    table {
+        font-size: 13px;
+        margin: 5px;
+        table-layout: auto;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .search {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search p {
+        font-size: 14px;
+    }
+
+    table{
+        display: block;
+        width: 100%;
+        table-layout: auto;
     }
 }
