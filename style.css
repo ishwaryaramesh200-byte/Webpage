@@ -398,11 +398,7 @@ p {
     flex-direction: column;
     gap: 15px;
     width: 70%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     min-width: 0;
-
 }
 
 .revenue .fa-solid {
